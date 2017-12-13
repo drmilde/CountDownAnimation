@@ -38,7 +38,10 @@ public class CountdowAnimation implements Animation.AnimationListener {
 
     @Override
     public void onAnimationEnd(Animation animation) {
-        anim.cancel();
+        anim.cancel();  // IMPORTANT ... animation must be canceled
+                        // to avoid double calling of AnimationListener
+
+        // restart animation
         if (count >= 0) {
             startAnimation();
         }
