@@ -1,12 +1,10 @@
 package com.example.milde.countdownanimation;
 
-import android.support.v7.app.AppCompatActivity;
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorSet;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroupOverlay;
-import android.view.ViewOverlay;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         tv = (TextView)findViewById(R.id.tvZahl);
 
-        Button btnAnimate = (Button)findViewById(R.id.btnAnimate);
+        final Button btnAnimate = (Button)findViewById(R.id.btnAnimate);
         btnAnimate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,8 +29,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void animateNumber() {
-        CountdowAnimation cdAnim = new CountdowAnimation(this, tv, 9);
-        cdAnim.startAnimation();
+        /**
+        AnimatorSet set = (AnimatorSet) AnimatorInflater
+                .loadAnimator(getApplicationContext(), R.animator.scale_down_animator);
+        set.setTarget(tv);
+        set.start();
+         **/
+        CountdowAnimation anim = new CountdowAnimation(this, tv, 9);
+        anim.startAnimation();
     }
 
 }

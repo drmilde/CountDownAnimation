@@ -17,7 +17,9 @@
 
         android:textSize="180dp"
 
-        android:visibility="invisible"
+        android:visibility="visible"
+        android:scaleX="1.0"
+        android:alpha="1.0"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
