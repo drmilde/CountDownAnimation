@@ -30,6 +30,9 @@ public class CountdowAnimation implements Animation.AnimationListener {
         tv.startAnimation(anim);
     }
 
+
+    // interface routines
+
     @Override
     public void onAnimationStart(Animation animation) {
         tv.setText("" + count);

@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:id="@android:id/content"
+
     tools:context="com.example.milde.countdownanimation.MainActivity">
 
     <TextView
@@ -13,6 +16,8 @@
         android:text="3"
 
         android:textSize="180dp"
+
+        android:visibility="invisible"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
